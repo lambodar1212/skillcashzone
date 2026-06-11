@@ -3,401 +3,414 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WebCreator Pro</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<title>Skillcashzone| Professional Web Developer</title>
+
+<meta name="description" content="Professional Web Developer creating modern websites, landing pages, portfolio websites and business websites.">
+
+<meta name="keywords" content="web developer, website designer, portfolio website, business website">
+
+<meta name="robots" content="index, follow">
+
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    background:#f5f7fa;
-    color:#333;
+font-family:Arial,sans-serif;
+background:#f5f7fa;
+color:#333;
+line-height:1.6;
 }
 
-/* Header */
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#fff;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 8%;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-    z-index:1000;
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
 }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#0066ff;
-}
-
-nav{
-    display:flex;
-    gap:20px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#333;
-    font-weight:bold;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#0066ff;
-}
-
-/* Hero */
 .hero{
-    position:relative;
-    min-height:100vh;
-    background:url('https://raw.githubusercontent.com/lambodar1212/skillcashzone/refs/heads/main/9EEB2F83-F48D-49CB-B67B-EAE134FCAEA9.png') center/cover no-repeat;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
+background:#0f172a;
+color:white;
+text-align:center;
+padding:80px 20px;
 }
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.65);
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
 }
 
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:800px;
-    padding:20px;
-}
-
-.hero-content h1{
-    font-size:55px;
-    margin-bottom:15px;
-}
-
-.hero-content p{
-    font-size:20px;
-    margin-bottom:25px;
-}
-
-.hero-btn{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    padding:15px 35px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-/* Sections */
-section{
-    padding:80px 8%;
-}
-
-.title{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:36px;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+.btn{
+display:inline-block;
+background:#2563eb;
+color:white;
+text-decoration:none;
+padding:12px 25px;
+border-radius:6px;
+margin-top:15px;
 }
 
 .card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:.3s;
+background:white;
+padding:20px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
-.card:hover{
-    transform:translateY(-5px);
+details{
+background:white;
+padding:15px;
+border-radius:10px;
+margin-top:20px;
 }
 
-.card h3{
-    margin-bottom:10px;
-    color:#0066ff;
+form{
+background:white;
+padding:25px;
+border-radius:10px;
 }
 
-/* About */
-.about{
-    text-align:center;
-    max-width:900px;
-    margin:auto;
-    line-height:1.8;
+input,
+textarea,
+select{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+border:1px solid #ddd;
+border-radius:6px;
 }
 
-/* Contact */
-.contact{
-    text-align:center;
+button{
+background:#2563eb;
+color:white;
+border:none;
+padding:14px 25px;
+border-radius:6px;
+cursor:pointer;
+width:100%;
 }
 
-.contact a{
-    display:inline-block;
-    margin-top:20px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:50px;
-}
-.instagram-btn{
-    position:fixed;
-    right:20px;
-    bottom:95px; /* WhatsApp button ke upar */
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    font-size:30px;
-    box-shadow:0 4px 15px rgba(0,0,0,.3);
-    z-index:9999;
-    transition:.3s;
-}
-
-.instagram-btn:hover{
-    transform:scale(1.1);
-}
-/* Footer */
 footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:25px;
+background:#0f172a;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
 }
 
-/* WhatsApp Floating Button */
-.whatsapp-btn{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    background:#25D366;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    font-size:32px;
-    box-shadow:0 4px 15px rgba(0,0,0,.3);
-    z-index:9999;
-    transition:.3s;
-}
-
-.whatsapp-btn:hover{
-    transform:scale(1.1);
-}
-
-/* Mobile */
 @media(max-width:768px){
 
-header{
-    flex-direction:column;
-    padding:15px;
+.hero{
+padding:60px 15px;
 }
 
-nav{
-    margin-top:10px;
-    flex-wrap:wrap;
-    justify-content:center;
+.hero h1{
+font-size:32px;
 }
 
-.hero-content h1{
-    font-size:36px;
+h2{
+font-size:24px;
 }
 
-.hero-content p{
-    font-size:16px;
+.card{
+padding:15px;
 }
 
-.title{
-    font-size:28px;
-}
-}
-.creator-float{
-    position:fixed;
-    left:20px;
-    bottom:20px;
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    overflow:hidden;
-    border:3px solid #fff;
-    box-shadow:0 4px 15px rgba(0,0,0,.3);
-    z-index:9999;
-    animation:float 3s ease-in-out infinite;
+.container{
+padding:15px;
 }
 
-.creator-float img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-@keyframes float{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-10px);}
-    100%{transform:translateY(0);}
 }
 </style>
+
 </head>
 <body>
 
-<header>
-<div class="logo">Skillcashzone.online</div>
+<div class="hero">
+<h1>Skillcashzone</h1>
+<p>Professional Web Developer & Designer</p>
+<a href="#contact" class="btn">Hire Me</a>
+</div>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
 
-<!-- Hero -->
-<section class="hero" id="home">
-<div class="overlay"></div>
 
-<div class="hero-content">
-<h1>Create Professional Websites</h1>
+<div class="container">
+
+<h2>Skills</h2>
+
 <p>
-Modern, Fast, Mobile-Friendly & SEO Optimized Websites
-for Businesses, Creators and Startups.
+HTML • CSS • JavaScript • SEO • GitHub Pages • Responsive Design
 </p>
 
-<a href="#contact" class="hero-btn">
-Get Started
-</a>
+<details>
+<summary><b>📋 View Full Project Details</b></summary>
+
+<br>
+
+<h3>Website Development Service</h3>
+
+<ul>
+<li>Responsive Design</li>
+<li>SEO Friendly</li>
+<li>Fast Loading</li>
+<li>Mobile Compatible</li>
+<li>Custom Domain Setup</li>
+<li>GitHub Pages Hosting</li>
+</ul>
+
+<p>
+Delivery Time: 2-7 Days<br>
+Support: 30 Days Free
+</p>
+
+</details>
+<h2 style="color:#0f172a;">📂 Website Demo Portfolio</h2>
+
+<div style="overflow-x:auto;">
+
+<table style="width:100%;border-collapse:collapse;background:#fff;">
+
+<tr style="background:#0f172a;color:white;">
+    <th style="padding:12px;border:1px solid #ddd;">Website Type</th>
+    <th style="padding:12px;border:1px solid #ddd;">Category</th>
+    <th style="padding:12px;border:1px solid #ddd;">Demo</th>
+</tr>
+
+<tr>
+    <td style="padding:12px;border:1px solid #ddd;">Business Website</td>
+    <td style="padding:12px;border:1px solid #ddd;">Corporate</td>
+    <td style="padding:12px;border:1px solid #ddd;">
+        <a href="#" target="_blank">View</a>
+    </td>
+</tr>
+
+<tr>
+    <td style="padding:12px;border:1px solid #ddd;">E-Commerce Store</td>
+    <td style="padding:12px;border:1px solid #ddd;">Shopping</td>
+    <td style="padding:12px;border:1px solid #ddd;">
+        <a href="#" target="_blank">View</a>
+    </td>
+</tr>
+
+<tr>
+    <td style="padding:12px;border:1px solid #ddd;">Blog Website</td>
+    <td style="padding:12px;border:1px solid #ddd;">Content</td>
+    <td style="padding:12px;border:1px solid #ddd;">
+        <a href="#" target="_blank">View</a>
+    </td>
+</tr>
+
+<tr>
+    <td style="padding:12px;border:1px solid #ddd;">Portfolio Website</td>
+    <td style="padding:12px;border:1px solid #ddd;">Personal</td>
+    <td style="padding:12px;border:1px solid #ddd;">
+        <a href="#" target="_blank">View</a>
+    </td>
+</tr>
+
+<tr>
+    <td style="padding:12px;border:1px solid #ddd;">Restaurant Website</td>
+    <td style="padding:12px;border:1px solid #ddd;">Food</td>
+    <td style="padding:12px;border:1px solid #ddd;">
+        <a href="#" target="_blank">View</a>
+    </td>
+</tr>
+
+</table>
+
 </div>
-</section>
 
-<!-- Services -->
-<section id="services">
-<h2 class="title">Our Services</h2>
 
-<div class="cards">
+
+<br>
+
+<h2>Services</h2>
+
+<div class="card">
+<h3>Landing Page Design</h3>
+<p>High-converting landing pages.</p>
+</div>
 
 <div class="card">
 <h3>Business Website</h3>
-<p>We design and develop professional business websites with
-modern layouts, responsive design, SEO optimization,
-contact forms, WhatsApp integration and fast performance
-to help your company establish credibility and generate
-more leads online.</p>
-</div>
-
-<div class="card">
-<h3>E-Commerce Store</h3>
-<p>Build a complete online shopping platform for your business with modern design 
-and advanced features. Our e-commerce solutions include product management, 
-shopping cart, secure payment integration, order management, customer profiles, 
-wishlist functionality, promotional offers and responsive design. Every store is 
-optimized for speed, security and search engines to help you attract more visitors, 
-improve customer satisfaction and maximize online revenue.
-</p>
+<p>Professional websites for companies.</p>
 </div>
 
 <div class="card">
 <h3>Portfolio Website</h3>
-<p>Personal branding websites for creators.</p>
+<p>Personal branding websites.</p>
 </div>
 
+
+
+<br>
+
+<h2 style="text-align:center;color:#0f172a;">
+💰 Website Pricing
+</h2>
+
+<div style="overflow-x:auto;">
+
+<table style="width:100%;border-collapse:collapse;background:#fff;">
+
+<tr style="background:#0f172a;color:#fff;">
+    <th style="padding:12px;border:1px solid #ddd;">Package</th>
+    <th style="padding:12px;border:1px solid #ddd;">Price</th>
+    <th style="padding:12px;border:1px solid #ddd;">Order</th>
+</tr>
+
+<tr>
+    <td style="padding:12px;border:1px solid #ddd;">Landing Page</td>
+    <td style="padding:12px;border:1px solid #ddd;">₹999</td>
+    <td style="padding:12px;border:1px solid #ddd;">
+        <a href="#contact"
+        style="background:#2563eb;color:white;padding:8px 15px;text-decoration:none;border-radius:5px;">
+        Order Now
+        </a>
+    </td>
+</tr>
+
+<tr>
+    <td style="padding:12px;border:1px solid #ddd;">Portfolio Website</td>
+    <td style="padding:12px;border:1px solid #ddd;">₹1,999</td>
+    <td style="padding:12px;border:1px solid #ddd;">
+        <a href="#contact"
+        style="background:#2563eb;color:white;padding:8px 15px;text-decoration:none;border-radius:5px;">
+        Order Now
+        </a>
+    </td>
+</tr>
+
+<tr>
+    <td style="padding:12px;border:1px solid #ddd;">Business Website</td>
+    <td style="padding:12px;border:1px solid #ddd;">₹3,999</td>
+    <td style="padding:12px;border:1px solid #ddd;">
+        <a href="#contact"
+        style="background:#2563eb;color:white;padding:8px 15px;text-decoration:none;border-radius:5px;">
+        Order Now
+        </a>
+    </td>
+</tr>
+
+<tr>
+    <td style="padding:12px;border:1px solid #ddd;">Blog Website</td>
+    <td style="padding:12px;border:1px solid #ddd;">₹4,999</td>
+    <td style="padding:12px;border:1px solid #ddd;">
+        <a href="#contact"
+        style="background:#2563eb;color:white;padding:8px 15px;text-decoration:none;border-radius:5px;">
+        Order Now
+        </a>
+    </td>
+</tr>
+
+<tr>
+    <td style="padding:12px;border:1px solid #ddd;">E-Commerce Website</td>
+    <td style="padding:12px;border:1px solid #ddd;">₹9,999</td>
+    <td style="padding:12px;border:1px solid #ddd;">
+        <a href="#contact"
+        style="background:#2563eb;color:white;padding:8px 15px;text-decoration:none;border-radius:5px;">
+        Order Now
+        </a>
+    </td>
+</tr>
+
+</table>
+
 </div>
-</section>
 
-<!-- Portfolio -->
-<section id="portfolio">
-<h2 class="title">Portfolio</h2>
 
-<div class="cards">
+<form id="contact"
+action="https://formsubmit.co/lambodarsagadia9@gmail.com" method="POST" style="max-width:500px;margin:20px auto;padding:20px;background:#f8f8f8;border:1px solid #999;">
 
-<div class="card">
-<h3>Restaurant Website</h3>
-<p>Beautiful food ordering and restaurant websites.</p>
-</div>
+<h2 style="margin-top:0;color:#003366;">
+Website Development Inquiry
+</h2>
 
-<div class="card">
-<h3>School Portal</h3>
-<p>Education and student management websites.</p>
-</div>
-
-<div class="card">
-<h3>YouTube Creator Site</h3>
-<p>Professional creator and influencer websites.</p>
-</div>
-
-</div>
-</section>
-
-<!-- About -->
-<section id="about">
-<h2 class="title">About Us</h2>
-
-<div class="about">
-<p>
-Skillcashzone helps businesses and creators build
-modern websites that look great on mobile, tablet and desktop.
-We focus on performance, design and SEO to help your brand grow online.
+<p style="color:#555;">
+Fill out the form below and we will contact you shortly.
 </p>
+
+<input type="hidden" name="_subject" value="New Website Development Order">
+
+<label><b>Name</b></label><br>
+<input type="text" name="Name" required
+style="width:100%;padding:8px;border:1px solid #999;margin:5px 0 10px 0;box-sizing:border-box;">
+
+<label><b>Email</b></label><br>
+<input type="email" name="Email" required
+style="width:100%;padding:8px;border:1px solid #999;margin:5px 0 10px 0;box-sizing:border-box;">
+
+<label><b>Phone Number</b></label><br>
+<input type="tel" name="Phone" required
+style="width:100%;padding:8px;border:1px solid #999;margin:5px 0 10px 0;box-sizing:border-box;">
+
+<label><b>Website Type</b></label><br>
+<select name="Website Type" required
+style="width:100%;padding:8px;border:1px solid #999;margin:5px 0 10px 0;box-sizing:border-box;">
+<option>Landing Page</option>
+<option>Business Website</option>
+<option>Blog Website</option>
+<option>E-commerce Website</option>
+</select>
+
+<label><b>Project Details</b></label><br>
+<textarea name="Requirements"
+style="width:100%;height:100px;padding:8px;border:1px solid #999;box-sizing:border-box;"></textarea>
+
+<br><br>
+
+<button type="submit"
+style="background:#003366;color:white;padding:10px 20px;border:1px solid #002244;cursor:pointer;">
+Submit Request
+</button>
+
+</form>
+
+<h2 style="color:#0f172a;">👋 About Me</h2>
+
+<p style="font-size:16px;line-height:1.8;color:#555;">
+Hello! I'm a passionate Web Developer who specializes in creating modern,
+responsive, and SEO-friendly websites for businesses, startups, and individuals.
+My goal is to help clients build a strong online presence with professional,
+fast-loading, and user-friendly websites.
+</p>
+
+<p style="font-size:16px;line-height:1.8;color:#555;">
+I provide website design, landing pages, portfolio websites, business websites,
+blogs, and custom web solutions tailored to client needs. Every project is built
+with a focus on performance, mobile responsiveness, and a clean user experience.
+</p>
+
+<p style="font-size:16px;line-height:1.8;color:#555;">
+Whether you need a simple landing page or a complete business website, I am
+committed to delivering high-quality work, clear communication, and reliable
+support throughout the project.
+</p>
+
+<div style="background:#f8fafc;padding:15px;border-left:4px solid #2563eb;border-radius:5px;margin-top:15px;">
+<b>✔ Responsive Design</b><br>
+<b>✔ SEO Friendly Websites</b><br>
+<b>✔ Fast Loading Pages</b><br>
+<b>✔ Professional UI Design</b><br>
+<b>✔ Ongoing Support</b>
 </div>
-</section>
 
-<!-- Contact -->
-<section id="contact">
-<h2 class="title">Contact Us</h2>
 
-<div class="contact">
-<p>Email: lambodarsagadia9@gmail.com</p>
-<p>WhatsApp: +91 6372826205</p>
-
-<a href="https://wa.me/6372826205" target="_blank">
-Chat on WhatsApp
-</a>
 </div>
-</section>
+
+
+
 
 <footer>
-© 2026 SKILLCHASZONE | All Rights Reserved
+<h3>Lambodar</h3>
+<p>Professional Web Developer & Designer</p>
+<p>© 2026 All Rights Reserved</p>
 </footer>
-
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/6372826205"
-class="whatsapp-btn"
-target="_blank">
-💬
-</a>
-<a href="https://instagram.com/skillcashzone"
-class="instagram-btn"
-target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-<!-- Creator Floating Image -->
-<a href="#about" class="creator-float">
-    <img src="https://raw.githubusercontent.com/lambodar1212/skillcashzone/refs/heads/main/9EEB2F83-F48D-49CB-B67B-EAE134FCAEA9.png" alt="Creator">
-</a>
 
 </body>
 </html>
