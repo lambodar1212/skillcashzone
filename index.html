@@ -1,416 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Skillcashzone| Professional Web Developer</title>
+<title>QuickLoan - Fast Personal Loans</title>
 
-<meta name="description" content="Professional Web Developer creating modern websites, landing pages, portfolio websites and business websites.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<meta name="keywords" content="web developer, website designer, portfolio website, business website">
-
-<meta name="robots" content="index, follow">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Poppins,sans-serif;
 }
+
 
 body{
-font-family:Arial,sans-serif;
-background:#f5f7fa;
+background:#f7f9fc;
+color:#222;
+overflow-x:hidden;
+}
+
+
+/* HEADER */
+
+header{
+background:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px #ddd;
+}
+
+
+.logo{
+font-size:25px;
+font-weight:700;
+color:#0066ff;
+}
+
+
+nav a{
+margin-left:20px;
+text-decoration:none;
 color:#333;
-line-height:1.6;
+font-size:15px;
 }
 
-.container{
-max-width:1000px;
-margin:auto;
-padding:20px;
-}
-
-.hero{
-background:#0f172a;
-color:white;
-text-align:center;
-padding:80px 20px;
-}
-
-.hero h1{
-font-size:48px;
-margin-bottom:10px;
-}
 
 .btn{
-display:inline-block;
-background:#2563eb;
+background:#0066ff;
 color:white;
-text-decoration:none;
 padding:12px 25px;
-border-radius:6px;
-margin-top:15px;
+border-radius:30px;
+text-decoration:none;
+display:inline-block;
+font-weight:600;
 }
 
-.card{
-background:white;
-padding:20px;
-margin-bottom:15px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
-}
 
-details{
-background:white;
-padding:15px;
-border-radius:10px;
-margin-top:20px;
-}
+/* HERO */
 
-form{
-background:white;
-padding:25px;
-border-radius:10px;
-}
-
-input,
-textarea,
-select{
-width:100%;
-padding:12px;
-margin-bottom:10px;
-border:1px solid #ddd;
-border-radius:6px;
-}
-
-button{
-background:#2563eb;
-color:white;
-border:none;
-padding:14px 25px;
-border-radius:6px;
-cursor:pointer;
-width:100%;
-}
-
-footer{
-background:#0f172a;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:40px;
-}
-
-@media(max-width:768px){
 
 .hero{
-padding:60px 15px;
+padding:70px 8%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
 }
+
 
 .hero h1{
-font-size:32px;
+font-size:45px;
+line-height:1.2;
 }
 
-h2{
-font-size:24px;
+
+.hero span{
+color:#0066ff;
 }
+
+
+.hero p{
+margin:20px 0;
+color:#666;
+font-size:18px;
+}
+
+
+
+/* OFFER CARD */
+
+
+.offer-card{
+position:relative;
+overflow:hidden;
+background:linear-gradient(135deg,#0a2a88,#007bff,#00c6ff);
+padding:25px;
+border-radius:20px;
+color:white;
+box-shadow:0 15px 35px rgba(0,87,255,.35);
+animation:pulse 2s infinite;
+max-width:400px;
+}
+
+
+@keyframes pulse{
+
+50%{
+transform:scale(1.03);
+}
+
+}
+
+
+
+.shine{
+
+position:absolute;
+top:0;
+left:-120%;
+width:60px;
+height:100%;
+background:rgba(255,255,255,.4);
+transform:skewX(-25deg);
+animation:shine 3s infinite;
+
+}
+
+
+@keyframes shine{
+
+100%{
+left:120%;
+}
+
+}
+
+
+.badge{
+
+background:#ffffff33;
+padding:5px 12px;
+border-radius:20px;
+font-size:13px;
+display:inline-block;
+
+}
+
+
+
+/* FEATURES */
+
+
+.features{
+padding:50px 8%;
+text-align:center;
+}
+
+
+.cards{
+
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:30px;
+flex-wrap:wrap;
+
+}
+
 
 .card{
-padding:15px;
+
+background:white;
+padding:25px;
+width:280px;
+border-radius:15px;
+box-shadow:0 5px 20px #ddd;
+
 }
 
-.container{
-padding:15px;
-}
+
+.card h3{
+
+color:#0066ff;
+margin-bottom:10px;
 
 }
+
+
+
+/* FOOTER */
+
+
+footer{
+
+background:#111;
+color:white;
+padding:30px;
+text-align:center;
+
+}
+
+
+
+/* MOBILE */
+
+
+@media(max-width:800px){
+
+
+header{
+
+flex-direction:column;
+gap:15px;
+padding:20px;
+
+}
+
+
+nav{
+
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+
+nav a{
+
+margin:0;
+font-size:14px;
+
+}
+
+
+.hero{
+
+padding:40px 20px;
+flex-direction:column;
+text-align:center;
+
+}
+
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+
+.hero p{
+
+font-size:15px;
+
+}
+
+
+.hero > div,
+.hero > a{
+
+width:100%;
+
+}
+
+
+.offer-card{
+
+max-width:100%;
+margin:auto;
+
+}
+
+
+.cards{
+
+flex-direction:column;
+align-items:center;
+
+}
+
+
+.card{
+
+width:100%;
+max-width:350px;
+
+}
+
+
+}
+
 </style>
 
+
 </head>
+
+
 <body>
 
-<div class="hero">
-<h1>Skillcashzone</h1>
-<p>Professional Web Developer & Designer</p>
-<a href="#contact" class="btn">Hire Me</a>
+
+
+<header>
+
+
+<div class="logo">
+QuickLoan
 </div>
 
 
+<nav>
 
-<div class="container">
+<a href="#">Home</a>
 
-<h2>Skills</h2>
+<a href="#">Loans</a>
+
+<a href="#">About</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+
+<a class="btn" href="apply.html">
+Apply Now
+</a>
+
+
+</header>
+
+
+
+
+
+<section class="hero">
+
+
+<div>
+
+
+<h1>
+
+Get Instant 
+<span>Personal Loan</span>
+
+<br>
+
+Simple & Secure
+
+</h1>
+
 
 <p>
-HTML • CSS • JavaScript • SEO • GitHub Pages • Responsive Design
+
+Apply online and get quick approval with easy documentation.
+Flexible repayment options and transparent process.
+
 </p>
 
-<details>
-<summary><b>📋 View Full Project Details</b></summary>
 
-<br>
+<a class="btn" href="apply.html">
 
-<h3>Website Development Service</h3>
+Apply For Loan
 
-<ul>
-<li>Responsive Design</li>
-<li>SEO Friendly</li>
-<li>Fast Loading</li>
-<li>Mobile Compatible</li>
-<li>Custom Domain Setup</li>
-<li>GitHub Pages Hosting</li>
-</ul>
+</a>
+
+
+</div>
+
+
+
+
+
+<a href="apply.html" style="text-decoration:none;">
+
+
+<div class="offer-card">
+
+
+<div class="shine"></div>
+
+
+<div class="badge">
+
+🔥 LIMITED OFFER
+
+</div>
+
+
+<h2 style="margin:15px 0;font-size:30px;">
+
+₹500 - ₹2,000
+
+</h2>
+
+
+<p style="color:white;font-size:14px;">
+
+⚡ Fast Approval<br>
+🔒 Secure Process<br>
+✅ Easy Application
+
+</p>
+
+
+
+<div style="
+margin-top:20px;
+background:white;
+color:#0066ff;
+padding:12px;
+border-radius:12px;
+text-align:center;
+font-weight:bold;
+">
+
+Apply Now →
+
+</div>
+
+
+
+</div>
+
+
+</a>
+
+
+
+</section>
+
+
+
+
+
+<section class="features">
+
+
+<h2>
+Why Choose Us?
+</h2>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+Fast Approval
+</h3>
 
 <p>
-Delivery Time: 2-7 Days<br>
-Support: 30 Days Free
+Quick online loan verification.
 </p>
-
-</details>
-<h2 style="color:#0f172a;">📂 Website Demo Portfolio</h2>
-
-<div style="overflow-x:auto;">
-
-<table style="width:100%;border-collapse:collapse;background:#fff;">
-
-<tr style="background:#0f172a;color:white;">
-    <th style="padding:12px;border:1px solid #ddd;">Website Type</th>
-    <th style="padding:12px;border:1px solid #ddd;">Category</th>
-    <th style="padding:12px;border:1px solid #ddd;">Demo</th>
-</tr>
-
-<tr>
-    <td style="padding:12px;border:1px solid #ddd;">Business Website</td>
-    <td style="padding:12px;border:1px solid #ddd;">Corporate</td>
-    <td style="padding:12px;border:1px solid #ddd;">
-        <a href="#" target="_blank">View</a>
-    </td>
-</tr>
-
-<tr>
-    <td style="padding:12px;border:1px solid #ddd;">E-Commerce Store</td>
-    <td style="padding:12px;border:1px solid #ddd;">Shopping</td>
-    <td style="padding:12px;border:1px solid #ddd;">
-        <a href="#" target="_blank">View</a>
-    </td>
-</tr>
-
-<tr>
-    <td style="padding:12px;border:1px solid #ddd;">Blog Website</td>
-    <td style="padding:12px;border:1px solid #ddd;">Content</td>
-    <td style="padding:12px;border:1px solid #ddd;">
-        <a href="#" target="_blank">View</a>
-    </td>
-</tr>
-
-<tr>
-    <td style="padding:12px;border:1px solid #ddd;">Portfolio Website</td>
-    <td style="padding:12px;border:1px solid #ddd;">Personal</td>
-    <td style="padding:12px;border:1px solid #ddd;">
-        <a href="#" target="_blank">View</a>
-    </td>
-</tr>
-
-<tr>
-    <td style="padding:12px;border:1px solid #ddd;">Restaurant Website</td>
-    <td style="padding:12px;border:1px solid #ddd;">Food</td>
-    <td style="padding:12px;border:1px solid #ddd;">
-        <a href="#" target="_blank">View</a>
-    </td>
-</tr>
-
-</table>
 
 </div>
 
 
-
-<br>
-
-<h2>Services</h2>
 
 <div class="card">
-<h3>Landing Page Design</h3>
-<p>High-converting landing pages.</p>
+
+<h3>
+Secure
+</h3>
+
+<p>
+Your details are protected.
+</p>
+
 </div>
+
+
+
 
 <div class="card">
-<h3>Business Website</h3>
-<p>Professional websites for companies.</p>
-</div>
 
-<div class="card">
-<h3>Portfolio Website</h3>
-<p>Personal branding websites.</p>
-</div>
+<h3>
+Easy Process
+</h3>
 
-
-
-<br>
-
-<h2 style="text-align:center;color:#0f172a;">
-💰 Website Pricing
-</h2>
-
-<div style="overflow-x:auto;">
-
-<table style="width:100%;border-collapse:collapse;background:#fff;">
-
-<tr style="background:#0f172a;color:#fff;">
-    <th style="padding:12px;border:1px solid #ddd;">Package</th>
-    <th style="padding:12px;border:1px solid #ddd;">Price</th>
-    <th style="padding:12px;border:1px solid #ddd;">Order</th>
-</tr>
-
-<tr>
-    <td style="padding:12px;border:1px solid #ddd;">Landing Page</td>
-    <td style="padding:12px;border:1px solid #ddd;">₹999</td>
-    <td style="padding:12px;border:1px solid #ddd;">
-        <a href="#contact"
-        style="background:#2563eb;color:white;padding:8px 15px;text-decoration:none;border-radius:5px;">
-        Order Now
-        </a>
-    </td>
-</tr>
-
-<tr>
-    <td style="padding:12px;border:1px solid #ddd;">Portfolio Website</td>
-    <td style="padding:12px;border:1px solid #ddd;">₹1,999</td>
-    <td style="padding:12px;border:1px solid #ddd;">
-        <a href="#contact"
-        style="background:#2563eb;color:white;padding:8px 15px;text-decoration:none;border-radius:5px;">
-        Order Now
-        </a>
-    </td>
-</tr>
-
-<tr>
-    <td style="padding:12px;border:1px solid #ddd;">Business Website</td>
-    <td style="padding:12px;border:1px solid #ddd;">₹3,999</td>
-    <td style="padding:12px;border:1px solid #ddd;">
-        <a href="#contact"
-        style="background:#2563eb;color:white;padding:8px 15px;text-decoration:none;border-radius:5px;">
-        Order Now
-        </a>
-    </td>
-</tr>
-
-<tr>
-    <td style="padding:12px;border:1px solid #ddd;">Blog Website</td>
-    <td style="padding:12px;border:1px solid #ddd;">₹4,999</td>
-    <td style="padding:12px;border:1px solid #ddd;">
-        <a href="#contact"
-        style="background:#2563eb;color:white;padding:8px 15px;text-decoration:none;border-radius:5px;">
-        Order Now
-        </a>
-    </td>
-</tr>
-
-<tr>
-    <td style="padding:12px;border:1px solid #ddd;">E-Commerce Website</td>
-    <td style="padding:12px;border:1px solid #ddd;">₹9,999</td>
-    <td style="padding:12px;border:1px solid #ddd;">
-        <a href="#contact"
-        style="background:#2563eb;color:white;padding:8px 15px;text-decoration:none;border-radius:5px;">
-        Order Now
-        </a>
-    </td>
-</tr>
-
-</table>
-
-</div>
-
-
-<form id="contact"
-action="https://formsubmit.co/lambodarsagadia9@gmail.com" method="POST" style="max-width:500px;margin:20px auto;padding:20px;background:#f8f8f8;border:1px solid #999;">
-
-<h2 style="margin-top:0;color:#003366;">
-Website Development Inquiry
-</h2>
-
-<p style="color:#555;">
-Fill out the form below and we will contact you shortly.
+<p>
+Simple application system.
 </p>
 
-<input type="hidden" name="_subject" value="New Website Development Order">
-
-<label><b>Name</b></label><br>
-<input type="text" name="Name" required
-style="width:100%;padding:8px;border:1px solid #999;margin:5px 0 10px 0;box-sizing:border-box;">
-
-<label><b>Email</b></label><br>
-<input type="email" name="Email" required
-style="width:100%;padding:8px;border:1px solid #999;margin:5px 0 10px 0;box-sizing:border-box;">
-
-<label><b>Phone Number</b></label><br>
-<input type="tel" name="Phone" required
-style="width:100%;padding:8px;border:1px solid #999;margin:5px 0 10px 0;box-sizing:border-box;">
-
-<label><b>Website Type</b></label><br>
-<select name="Website Type" required
-style="width:100%;padding:8px;border:1px solid #999;margin:5px 0 10px 0;box-sizing:border-box;">
-<option>Landing Page</option>
-<option>Business Website</option>
-<option>Blog Website</option>
-<option>E-commerce Website</option>
-</select>
-
-<label><b>Project Details</b></label><br>
-<textarea name="Requirements"
-style="width:100%;height:100px;padding:8px;border:1px solid #999;box-sizing:border-box;"></textarea>
-
-<br><br>
-
-<button type="submit"
-style="background:#003366;color:white;padding:10px 20px;border:1px solid #002244;cursor:pointer;">
-Submit Request
-</button>
-
-</form>
-
-<h2 style="color:#0f172a;">👋 About Me</h2>
-
-<p style="font-size:16px;line-height:1.8;color:#555;">
-Hello! I'm a passionate Web Developer who specializes in creating modern,
-responsive, and SEO-friendly websites for businesses, startups, and individuals.
-My goal is to help clients build a strong online presence with professional,
-fast-loading, and user-friendly websites.
-</p>
-
-<p style="font-size:16px;line-height:1.8;color:#555;">
-I provide website design, landing pages, portfolio websites, business websites,
-blogs, and custom web solutions tailored to client needs. Every project is built
-with a focus on performance, mobile responsiveness, and a clean user experience.
-</p>
-
-<p style="font-size:16px;line-height:1.8;color:#555;">
-Whether you need a simple landing page or a complete business website, I am
-committed to delivering high-quality work, clear communication, and reliable
-support throughout the project.
-</p>
-
-<div style="background:#f8fafc;padding:15px;border-left:4px solid #2563eb;border-radius:5px;margin-top:15px;">
-<b>✔ Responsive Design</b><br>
-<b>✔ SEO Friendly Websites</b><br>
-<b>✔ Fast Loading Pages</b><br>
-<b>✔ Professional UI Design</b><br>
-<b>✔ Ongoing Support</b>
 </div>
 
 
+
 </div>
+
+
+</section>
+
 
 
 
 
 <footer>
-<h3>Lambodar</h3>
-<p>Professional Web Developer & Designer</p>
-<p>© 2026 All Rights Reserved</p>
+
+© 2026 QuickLoan. All Rights Reserved.
+
 </footer>
 
+
+
 </body>
+
 </html>
