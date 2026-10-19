@@ -1,521 +1,853 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>QuickLoan - Fast Personal Loans</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
+<title>Silai Hisab Pro</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
-
+*{box-sizing:border-box}
 
 body{
-background:#f7f9fc;
-color:#222;
-overflow-x:hidden;
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f2f4fa;
+  color:#20243a;
 }
-
-
-/* HEADER */
 
 header{
-background:white;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 10px #ddd;
+  background:linear-gradient(135deg,#4527a0,#7c4dff);
+  color:white;
+  padding:24px 16px;
+  border-radius:0 0 24px 24px;
 }
+header h1{margin:0 0 7px;font-size:25px}
+header p{margin:0;color:#e7ddff;font-size:14px}
 
-
-.logo{
-font-size:25px;
-font-weight:700;
-color:#0066ff;
-}
-
-
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#333;
-font-size:15px;
-}
-
-
-.btn{
-background:#0066ff;
-color:white;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-display:inline-block;
-font-weight:600;
-}
-
-
-/* HERO */
-
-
-.hero{
-padding:70px 8%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:40px;
-}
-
-
-.hero h1{
-font-size:45px;
-line-height:1.2;
-}
-
-
-.hero span{
-color:#0066ff;
-}
-
-
-.hero p{
-margin:20px 0;
-color:#666;
-font-size:18px;
-}
-
-
-
-/* OFFER CARD */
-
-
-.offer-card{
-position:relative;
-overflow:hidden;
-background:linear-gradient(135deg,#0a2a88,#007bff,#00c6ff);
-padding:25px;
-border-radius:20px;
-color:white;
-box-shadow:0 15px 35px rgba(0,87,255,.35);
-animation:pulse 2s infinite;
-max-width:400px;
-}
-
-
-@keyframes pulse{
-
-50%{
-transform:scale(1.03);
-}
-
-}
-
-
-
-.shine{
-
-position:absolute;
-top:0;
-left:-120%;
-width:60px;
-height:100%;
-background:rgba(255,255,255,.4);
-transform:skewX(-25deg);
-animation:shine 3s infinite;
-
-}
-
-
-@keyframes shine{
-
-100%{
-left:120%;
-}
-
-}
-
-
-.badge{
-
-background:#ffffff33;
-padding:5px 12px;
-border-radius:20px;
-font-size:13px;
-display:inline-block;
-
-}
-
-
-
-/* FEATURES */
-
-
-.features{
-padding:50px 8%;
-text-align:center;
-}
-
+.container{max-width:1100px;margin:auto;padding:15px}
 
 .cards{
-
-display:flex;
-justify-content:center;
-gap:20px;
-margin-top:30px;
-flex-wrap:wrap;
-
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin:15px 0;
 }
 
-
-.card{
-
-background:white;
-padding:25px;
-width:280px;
-border-radius:15px;
-box-shadow:0 5px 20px #ddd;
-
+.card,.panel{
+  background:white;
+  border-radius:16px;
+  box-shadow:0 4px 14px #20243a0c;
 }
 
+.card{padding:16px}
+.card small{color:#777}
+.card h2{margin:9px 0 0;font-size:22px;color:#512da8}
 
-.card h3{
+.panel{padding:17px;margin-bottom:15px}
+h3{margin:0 0 15px;font-size:18px}
 
-color:#0066ff;
-margin-bottom:10px;
-
+label{
+  display:block;
+  font-size:13px;
+  margin:11px 0 6px;
+  color:#555;
 }
 
-
-
-/* FOOTER */
-
-
-footer{
-
-background:#111;
-color:white;
-padding:30px;
-text-align:center;
-
+input,button{
+  font-family:Arial,Helvetica,sans-serif;
 }
 
-
-
-/* MOBILE */
-
-
-@media(max-width:800px){
-
-
-header{
-
-flex-direction:column;
-gap:15px;
-padding:20px;
-
+input{
+  width:100%;
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  background:white;
+  font-size:15px;
+  outline-color:#7c4dff;
 }
 
-
-nav{
-
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-justify-content:center;
-
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
 }
 
-
-nav a{
-
-margin:0;
-font-size:14px;
-
+button{
+  border:0;
+  border-radius:10px;
+  padding:12px 14px;
+  font-size:13px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-
-.hero{
-
-padding:40px 20px;
-flex-direction:column;
-text-align:center;
-
+.primary{
+  background:#673ab7;
+  color:white;
+  width:100%;
+  margin-top:15px;
 }
 
-
-.hero h1{
-
-font-size:32px;
-
+.btns{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:12px;
 }
 
+.btn{background:#eee;color:#333}
+.green{background:#e2f7e9;color:#137333}
+.blue{background:#e5edff;color:#234db5}
+.red{background:#ffe7e7;color:#b3261e}
+.orange{background:#fff0d9;color:#8b5100}
 
-.hero p{
+.table-wrap{overflow-x:auto}
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:850px;
+}
+th,td{
+  text-align:left;
+  padding:11px 9px;
+  border-bottom:1px solid #eee;
+  font-size:13px;
+}
+th{background:#f7f4ff;color:#51339a}
+.pill{
+  background:#eee4ff;
+  color:#5e35b1;
+  padding:5px 8px;
+  border-radius:7px;
+}
+.empty{text-align:center;padding:25px;color:#888}
+.note{font-size:12px;color:#777;line-height:1.6}
+footer{text-align:center;color:#888;font-size:12px;padding:15px}
 
-font-size:15px;
-
+/* Password Screen */
+#lockScreen{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  background:linear-gradient(135deg,#4527a0,#7c4dff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
 }
 
-
-.hero > div,
-.hero > a{
-
-width:100%;
-
+.login-box{
+  background:white;
+  width:100%;
+  max-width:360px;
+  padding:28px 22px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 15px 45px #0003;
 }
 
-
-.offer-card{
-
-max-width:100%;
-margin:auto;
-
+.lock-icon{font-size:45px;margin-bottom:10px}
+.login-box h2{margin:0 0 10px;color:#512da8}
+.login-box p{color:#777;font-size:14px}
+#loginPassword{margin:12px 0}
+#loginForm button{
+  width:100%;
+  background:#673ab7;
+  color:white;
+  padding:13px;
 }
+#loginError{color:#c62828!important;min-height:18px}
 
-
-.cards{
-
-flex-direction:column;
-align-items:center;
-
+@media(min-width:650px){
+  .cards{grid-template-columns:repeat(4,1fr)}
+  .form-grid{grid-template-columns:repeat(3,1fr)}
 }
-
-
-.card{
-
-width:100%;
-max-width:350px;
-
-}
-
-
-}
-
 </style>
-
-
 </head>
-
 
 <body>
 
+<!-- PASSWORD SCREEN -->
+<div id="lockScreen">
+  <div class="login-box">
+    <div class="lock-icon">🔐</div>
+    <h2>Silai Hisab Pro</h2>
+    <p>Enter your password to continue</p>
 
+    <form id="loginForm">
+      <input type="password" id="loginPassword"
+        placeholder="Enter password" required
+        autocomplete="current-password">
+      <button type="submit">Unlock Dashboard</button>
+      <p id="loginError"></p>
+    </form>
+  </div>
+</div>
 
 <header>
-
-
-<div class="logo">
-QuickLoan
-</div>
-
-
-<nav>
-
-<a href="#">Home</a>
-
-<a href="#">Loans</a>
-
-<a href="#">About</a>
-
-<a href="#">Contact</a>
-
-</nav>
-
-
-<a class="btn" href="apply.html">
-Apply Now
-</a>
-
-
+  <h1>Silai Hisab Pro</h1>
+  <p>Manage sewing bundles, pieces, time and earnings</p>
 </header>
 
-
-
-
-
-<section class="hero">
-
-
-<div>
-
-
-<h1>
-
-Get Instant 
-<span>Personal Loan</span>
-
-<br>
-
-Simple & Secure
-
-</h1>
-
-
-<p>
-
-Apply online and get quick approval with easy documentation.
-Flexible repayment options and transparent process.
-
-</p>
-
-
-<a class="btn" href="apply.html">
-
-Apply For Loan
-
-</a>
-
-
-</div>
-
-
-
-
-
-<a href="apply.html" style="text-decoration:none;">
-
-
-<div class="offer-card">
-
-
-<div class="shine"></div>
-
-
-<div class="badge">
-
-🔥 LIMITED OFFER
-
-</div>
-
-
-<h2 style="margin:15px 0;font-size:30px;">
-
-₹500 - ₹2,000
-
-</h2>
-
-
-<p style="color:white;font-size:14px;">
-
-⚡ Fast Approval<br>
-🔒 Secure Process<br>
-✅ Easy Application
-
-</p>
-
-
-
-<div style="
-margin-top:20px;
-background:white;
-color:#0066ff;
-padding:12px;
-border-radius:12px;
-text-align:center;
-font-weight:bold;
-">
-
-Apply Now →
-
-</div>
-
-
-
-</div>
-
-
-</a>
-
-
-
-</section>
-
-
-
-
-
-<section class="features">
-
-
-<h2>
-Why Choose Us?
-</h2>
-
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>
-Fast Approval
-</h3>
-
-<p>
-Quick online loan verification.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-Secure
-</h3>
-
-<p>
-Your details are protected.
-</p>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-Easy Process
-</h3>
-
-<p>
-Simple application system.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<footer>
-
-© 2026 QuickLoan. All Rights Reserved.
-
-</footer>
-
-
+<main class="container">
+
+  <!-- SUMMARY -->
+  <section class="cards">
+    <div class="card">
+      <small>Total Pieces</small>
+      <h2 id="totalPieces">0</h2>
+    </div>
+    <div class="card">
+      <small>Total Earnings</small>
+      <h2 id="totalMoney">₹0.00</h2>
+    </div>
+    <div class="card">
+      <small>Unique Bundles</small>
+      <h2 id="totalBundles">0</h2>
+    </div>
+    <div class="card">
+      <small>Total Entries</small>
+      <h2 id="totalEntries">0</h2>
+    </div>
+  </section>
+
+  <!-- ENTRY FORM -->
+  <section class="panel">
+    <h3 id="formTitle">Add New Bundle</h3>
+
+    <form id="entryForm">
+      <div class="form-grid">
+
+        <div>
+          <label>Bundle Number *</label>
+          <input id="bundle" required
+            placeholder="Example: B-101">
+        </div>
+
+        <div>
+          <label>Size *</label>
+          <input id="size" required
+            placeholder="Example: 28, 30, Custom">
+        </div>
+
+        <div>
+          <label>Number of Pieces *</label>
+          <input id="pieces" type="number"
+            min="1" step="1" required placeholder="100">
+        </div>
+
+        <div>
+          <label>Rate Per Piece (₹) *</label>
+          <input id="rate" type="number"
+            min="0" step="0.01" value="0.40" required>
+        </div>
+
+        <div>
+          <label>Work Date *</label>
+          <input id="date" type="date" required>
+        </div>
+
+        <div>
+          <label>Notes (Optional)</label>
+          <input id="notes" maxlength="200"
+            placeholder="Shirt stitching">
+        </div>
+
+      </div>
+
+      <button class="primary" type="submit" id="saveBtn">
+        Save Bundle
+      </button>
+
+      <div class="btns">
+        <button class="btn" type="button" id="cancelEdit"
+          style="display:none">Cancel Edit</button>
+      </div>
+    </form>
+
+    <p class="note">
+      Entry time is recorded automatically when you save a new bundle.
+      Editing a record keeps its original entry time.
+    </p>
+  </section>
+
+  <!-- FILTERS -->
+  <section class="panel">
+    <h3>Search and Filter</h3>
+
+    <input id="search"
+      placeholder="Search bundle number or notes...">
+
+    <div class="form-grid">
+      <div>
+        <label>Filter by Size</label>
+        <input id="filterSize" placeholder="Enter size">
+      </div>
+
+      <div>
+        <label>From Date</label>
+        <input id="fromDate" type="date">
+      </div>
+
+      <div>
+        <label>To Date</label>
+        <input id="toDate" type="date">
+      </div>
+    </div>
+
+    <div class="btns">
+      <button class="btn" id="clearFilters" type="button">
+        Clear Filters
+      </button>
+    </div>
+  </section>
+
+  <!-- RECORDS -->
+  <section class="panel">
+    <h3>Bundle Records</h3>
+
+    <div class="btns" style="margin-bottom:15px">
+      <button class="green" id="jsonExport" type="button">
+        JSON Backup
+      </button>
+      <button class="blue" id="csvExport" type="button">
+        Export CSV
+      </button>
+      <button class="orange" id="jsonImportBtn" type="button">
+        Restore JSON
+      </button>
+      <input id="jsonFile" type="file"
+        accept=".json,application/json" hidden>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Work Date</th>
+            <th>Entry Date & Time</th>
+            <th>Bundle</th>
+            <th>Size</th>
+            <th>Pieces</th>
+            <th>Rate</th>
+            <th>Earnings</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="records"></tbody>
+      </table>
+      <div id="empty" class="empty">No records found.</div>
+    </div>
+
+    <p class="note" id="recordCount"></p>
+  </section>
+
+  <!-- SETTINGS -->
+  <section class="panel">
+    <h3>Data Settings</h3>
+    <p class="note">
+      Download a JSON backup regularly. Restore replaces current
+      records. Your data is saved in this browser on this device.
+    </p>
+    <button class="red" id="deleteAll" type="button">
+      Delete All Records
+    </button>
+  </section>
+
+</main>
+
+<footer>Silai Hisab Pro - Digital Sewing Register</footer>
+
+<script>
+/* =========================
+   PASSWORD SETTINGS
+========================= */
+
+const APP_PASSWORD = "Lambodar@300";
+
+const $ = id => document.getElementById(id);
+
+$("loginForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  if($("loginPassword").value === APP_PASSWORD){
+    $("lockScreen").style.display = "none";
+    $("loginError").textContent = "";
+    $("loginPassword").value = "";
+  }else{
+    $("loginError").textContent = "Incorrect password. Try again.";
+    $("loginPassword").value = "";
+    $("loginPassword").focus();
+  }
+});
+
+/* =========================
+   APP SETTINGS
+========================= */
+
+const STORAGE_KEY = "silai_hisab_pro_v2";
+
+let bundles = [];
+let editingId = null;
+
+function today(){
+  const d = new Date();
+  return d.getFullYear() + "-" +
+    String(d.getMonth()+1).padStart(2,"0") + "-" +
+    String(d.getDate()).padStart(2,"0");
+}
+
+$("date").value = today();
+
+function money(n){
+  return "₹" + Number(n || 0).toFixed(2);
+}
+
+function earnings(item){
+  return Number(item.pieces) * Number(item.rate);
+}
+
+function escapeHTML(value){
+  return String(value ?? "").replace(/[&<>"']/g, ch => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  })[ch]);
+}
+
+/* Format the saved entry timestamp */
+function formatEntryTime(value){
+  if(!value) return "Not recorded";
+
+  const d = new Date(value);
+  if(Number.isNaN(d.getTime())) return "Not recorded";
+
+  return d.toLocaleDateString() + " " +
+    d.toLocaleTimeString([], {
+      hour:"2-digit",
+      minute:"2-digit",
+      second:"2-digit",
+      hour12:true
+    });
+}
+
+/* =========================
+   LOAD AND SAVE DATA
+========================= */
+
+function loadData(){
+  try{
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if(saved){
+      const parsed = JSON.parse(saved);
+      if(Array.isArray(parsed)) bundles = parsed;
+    }
+  }catch(e){
+    alert("Unable to read saved data.");
+  }
+}
+
+function saveData(){
+  try{
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(bundles));
+    render();
+    return true;
+  }catch(e){
+    alert("Unable to save data. Export a backup and check storage.");
+    return false;
+  }
+}
+
+/* =========================
+   SEARCH AND FILTER
+========================= */
+
+function filteredRecords(){
+  const q = $("search").value.trim().toLowerCase();
+  const size = $("filterSize").value.trim().toLowerCase();
+  const from = $("fromDate").value;
+  const to = $("toDate").value;
+
+  return bundles.filter(item => {
+    const textMatch =
+      String(item.bundle || "").toLowerCase().includes(q) ||
+      String(item.notes || "").toLowerCase().includes(q);
+
+    const sizeMatch =
+      !size || String(item.size || "").toLowerCase().includes(size);
+
+    return textMatch && sizeMatch &&
+      (!from || item.date >= from) &&
+      (!to || item.date <= to);
+  }).sort((a,b) =>
+    String(b.date).localeCompare(String(a.date)) ||
+    Number(b.id) - Number(a.id)
+  );
+}
+
+/* =========================
+   DISPLAY RECORDS
+========================= */
+
+function render(){
+  const totalPieces = bundles.reduce(
+    (sum,x) => sum + Number(x.pieces || 0), 0
+  );
+
+  const totalMoney = bundles.reduce(
+    (sum,x) => sum + earnings(x), 0
+  );
+
+  const uniqueBundles = new Set(
+    bundles.map(x => String(x.bundle).toLowerCase())
+  ).size;
+
+  $("totalPieces").textContent = totalPieces;
+  $("totalMoney").textContent = money(totalMoney);
+  $("totalBundles").textContent = uniqueBundles;
+  $("totalEntries").textContent = bundles.length;
+
+  const list = filteredRecords();
+
+  $("records").innerHTML = list.map(item => `
+    <tr>
+      <td>${escapeHTML(item.date)}</td>
+      <td>${escapeHTML(formatEntryTime(item.createdAt))}</td>
+      <td>
+        <strong>${escapeHTML(item.bundle)}</strong>
+        ${item.notes
+          ? `<br><small>${escapeHTML(item.notes)}</small>`
+          : ""}
+      </td>
+      <td><span class="pill">${escapeHTML(item.size)}</span></td>
+      <td>${Number(item.pieces)}</td>
+      <td>${money(item.rate)}</td>
+      <td><strong>${money(earnings(item))}</strong></td>
+      <td>
+        <button class="blue" type="button"
+          onclick="editRecord('${escapeHTML(item.id)}')">Edit</button>
+        <button class="red" type="button"
+          onclick="deleteRecord('${escapeHTML(item.id)}')">Delete</button>
+      </td>
+    </tr>
+  `).join("");
+
+  $("empty").style.display = list.length ? "none" : "block";
+  $("recordCount").textContent =
+    `Showing ${list.length} of ${bundles.length} records`;
+}
+
+/* =========================
+   ADD OR EDIT BUNDLE
+========================= */
+
+$("entryForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const bundle = $("bundle").value.trim();
+  const size = $("size").value.trim();
+  const pieces = Number($("pieces").value);
+  const rate = Number($("rate").value);
+  const date = $("date").value;
+
+  if(
+    !bundle || !size ||
+    !Number.isInteger(pieces) || pieces < 1 ||
+    !Number.isFinite(rate) || rate < 0 ||
+    !date
+  ){
+    alert("Please enter valid details.");
+    return;
+  }
+
+  let oldItem = null;
+
+  if(editingId !== null){
+    oldItem = bundles.find(
+      x => String(x.id) === String(editingId)
+    );
+  }
+
+  const item = {
+    id: oldItem ? oldItem.id : Date.now(),
+    bundle,
+    size,
+    pieces,
+    rate,
+    date,
+    notes: $("notes").value.trim(),
+
+    /* Preserve original time when editing */
+    createdAt: oldItem && oldItem.createdAt
+      ? oldItem.createdAt
+      : new Date().toISOString(),
+
+    /* Record the most recent edit time */
+    updatedAt: new Date().toISOString()
+  };
+
+  if(editingId !== null){
+    bundles = bundles.map(x =>
+      String(x.id) === String(editingId) ? item : x
+    );
+  }else{
+    bundles.push(item);
+  }
+
+  if(saveData()){
+    resetForm();
+  }
+});
+
+function editRecord(id){
+  const item = bundles.find(
+    x => String(x.id) === String(id)
+  );
+
+  if(!item) return;
+
+  editingId = item.id;
+
+  $("bundle").value = item.bundle;
+  $("size").value = item.size;
+  $("pieces").value = item.pieces;
+  $("rate").value = item.rate;
+  $("date").value = item.date;
+  $("notes").value = item.notes || "";
+
+  $("formTitle").textContent = "Edit Bundle";
+  $("saveBtn").textContent = "Save Changes";
+  $("cancelEdit").style.display = "inline-block";
+
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function resetForm(){
+  editingId = null;
+  $("entryForm").reset();
+  $("date").value = today();
+  $("rate").value = "0.40";
+  $("formTitle").textContent = "Add New Bundle";
+  $("saveBtn").textContent = "Save Bundle";
+  $("cancelEdit").style.display = "none";
+}
+
+$("cancelEdit").addEventListener("click", resetForm);
+
+/* =========================
+   DELETE RECORD
+========================= */
+
+function deleteRecord(id){
+  if(!confirm("Delete this record?")) return;
+
+  const previous = bundles;
+  bundles = bundles.filter(x => String(x.id) !== String(id));
+
+  if(!saveData()){
+    bundles = previous;
+    render();
+    return;
+  }
+
+  if(String(editingId) === String(id)){
+    resetForm();
+  }
+}
+
+/* =========================
+   FILTER EVENTS
+========================= */
+
+["search","filterSize","fromDate","toDate"].forEach(id => {
+  $(id).addEventListener("input", render);
+  $(id).addEventListener("change", render);
+});
+
+$("clearFilters").addEventListener("click", () => {
+  $("search").value = "";
+  $("filterSize").value = "";
+  $("fromDate").value = "";
+  $("toDate").value = "";
+  render();
+});
+
+/* =========================
+   DOWNLOAD FILES
+========================= */
+
+function downloadFile(content, filename, type){
+  const blob = new Blob([content], {type});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+/* JSON BACKUP */
+$("jsonExport").addEventListener("click", () => {
+  const backup = {
+    app:"Silai Hisab Pro",
+    version:2,
+    exportedAt:new Date().toISOString(),
+    bundles
+  };
+
+  downloadFile(
+    JSON.stringify(backup, null, 2),
+    "silai-backup-" + today() + ".json",
+    "application/json"
+  );
+});
+
+/* CSV EXPORT */
+$("csvExport").addEventListener("click", () => {
+  const headers = [
+    "Work Date","Entry Date & Time","Bundle","Size",
+    "Pieces","Rate","Earnings","Notes"
+  ];
+
+  const rows = bundles.map(x => [
+    x.date,
+    formatEntryTime(x.createdAt),
+    x.bundle,
+    x.size,
+    x.pieces,
+    x.rate,
+    earnings(x),
+    x.notes || ""
+  ]);
+
+  const csv = [headers, ...rows].map(row =>
+    row.map(value =>
+      '"' + String(value ?? "").replace(/"/g, '""') + '"'
+    ).join(",")
+  ).join("\r\n");
+
+  downloadFile(
+    "\uFEFF" + csv,
+    "silai-hisab-" + today() + ".csv",
+    "text/csv;charset=utf-8"
+  );
+});
+
+/* =========================
+   RESTORE JSON BACKUP
+========================= */
+
+$("jsonImportBtn").addEventListener("click", () => {
+  $("jsonFile").click();
+});
+
+$("jsonFile").addEventListener("change", async function(){
+  const file = this.files[0];
+  if(!file) return;
+
+  try{
+    const parsed = JSON.parse(await file.text());
+    const imported = Array.isArray(parsed)
+      ? parsed
+      : parsed.bundles;
+
+    if(!Array.isArray(imported)){
+      throw new Error("Invalid format");
+    }
+
+    const valid = imported.every(x =>
+      x &&
+      typeof x.bundle === "string" &&
+      typeof x.size === "string" &&
+      x.size.trim().length > 0 &&
+      Number.isInteger(Number(x.pieces)) &&
+      Number(x.pieces) > 0 &&
+      Number.isFinite(Number(x.rate)) &&
+      Number(x.rate) >= 0 &&
+      /^\d{4}-\d{2}-\d{2}$/.test(x.date) &&
+      Number.isFinite(new Date(x.date).getTime()) &&
+      (!x.createdAt ||
+        Number.isFinite(new Date(x.createdAt).getTime()))
+    );
+
+    if(!valid) throw new Error("Invalid records");
+
+    if(!confirm(
+      "Restore this backup? Current records will be replaced."
+    )){
+      return;
+    }
+
+    const oldBundles = bundles;
+
+    bundles = imported.map((x,i) => ({
+      id: x.id ?? (Date.now()+i),
+      bundle: String(x.bundle),
+      size: String(x.size).trim(),
+      pieces: Number(x.pieces),
+      rate: Number(x.rate),
+      date: x.date,
+      notes: String(x.notes || ""),
+      createdAt: x.createdAt || null,
+      updatedAt: x.updatedAt || null
+    }));
+
+    if(!saveData()){
+      bundles = oldBundles;
+      render();
+      return;
+    }
+
+    resetForm();
+    alert("Backup restored successfully.");
+
+  }catch(e){
+    alert("Invalid Silai Hisab JSON backup file.");
+  }finally{
+    this.value = "";
+  }
+});
+
+/* =========================
+   DELETE ALL RECORDS
+========================= */
+
+$("deleteAll").addEventListener("click", () => {
+  if(!bundles.length){
+    alert("There are no records to delete.");
+    return;
+  }
+
+  if(!confirm(
+    "Delete ALL records permanently? Create a JSON backup first."
+  )){
+    return;
+  }
+
+  const oldBundles = bundles;
+  bundles = [];
+
+  if(!saveData()){
+    bundles = oldBundles;
+    render();
+    return;
+  }
+
+  resetForm();
+});
+
+/* START APP */
+loadData();
+render();
+</script>
 
 </body>
-
 </html>
